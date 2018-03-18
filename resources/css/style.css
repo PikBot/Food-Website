@@ -1,0 +1,623 @@
+/*
+Orange color: #e67e22
+*/
+
+/*----------------------------------*/
+/*BASIC SETUP*/
+/*----------------------------------*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color:#fff;
+    color: #555555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size:20px;
+    text-rendering: optimizeLegibility;
+    
+    
+}
+
+.clearfix{
+    zoom: 1
+}
+.clearfix:after{ /* after the end of the element using float the problem is fixed*/
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+/*----------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*----------------------------------*/
+
+.row{
+    max-width: 1140px;
+    margin:0 auto;
+}
+
+section{
+    padding: 80px 0px;
+}
+
+.box{
+    padding: 1%;
+}
+
+/*--------------HEADINGS-------------*/
+
+h1 , h2, h3{
+    
+    font-weight: 300;
+    text-transform: uppercase;
+    
+ 
+}
+
+h1{
+    margin-top: 0; /*due to normalize css file we have to use this */
+    margin-bottom: 20px;
+    color:#fff;
+    font-size: 240%; /*relative to base font size*/
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align:center;
+    margin-bottom: 30px; /*comes after the h2: after block */
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+h2:after{ /* appears after h2 - the orange line*/
+    display:block;
+    height: 2px;
+    background-color:#e67e22;
+    content: " "; /* have to specify contents we want nothing */
+    width: 100px;
+    margin: 0 auto; /*top and bottom is zero and left and right is auto */
+    margin-top: 30px; /* between h2 and this block */
+        
+}
+
+/*--------------PARAGRAPHS-------------*/
+.long-copy{
+    line-height: 145%; /* should be between 120 to 145% */
+    width: 70%;/*lines should not be very wide on the screen*/
+    margin-left: 15%;
+}
+
+.box p{
+    font-size: 89%;
+    line-height: 145%;
+}
+
+
+/*--------------ICONS-------------*/
+.icon-big{
+    font-size:350%; /* icon is just like a font */
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    
+}
+
+/*--------------LINKS-------------*/
+a:link,
+a:visited{
+    color: #e67e22;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #e67e22;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+
+/*--------------BUTTONS-------------*/
+
+.btn:link,
+.btn:visited,
+input[type=submit]{
+    display: inline-block; /*element behaves like an inline block */
+    padding: 10px 30px;
+    font-weight: 300; /*less font weight with bigger font size*/
+    text-decoration: none;
+    border-radius: 200px;
+    transition:background-color:0.2s, color:0.2s, border:0.2s; /*transition button color*/
+    
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    background-color: #e67e22;
+    border:1px solid #e67e22;
+    color: #fff;
+    margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border:1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: #cf6d17;
+}
+
+
+.btn-full:hover,
+.btn-full:active
+{
+    border:1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active
+{
+    border:1px solid #cf6d17;
+    color: #fff;
+}
+
+
+
+/*-----------------------------------------------------*/
+/*HEADER*/
+/*-----------------------------------------------------*/
+
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*darken the background with black color */
+    background-size:cover; /*cover entire screen*/
+    background-position: center;
+    background-attachment: fixed;
+    height:100vh;
+}
+
+.hero-text-box{
+    position: absolute;
+    width:1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*subtract half the height and width of the box to move exactly to center*/
+}
+
+.logo{
+    height: 100px;
+    width: auto;
+    float:left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float:right;
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li{ /*select all li elements inside main-nav class*/
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link, 
+.main-nav li a:visited{ /*select a elements inside li elements */
+    padding: 8px 0px; /* top/bottom and left/right*/
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /*90% of base size of 20px defined in html selector */
+    border-bottom: 2px solid transparent;
+    transition:border 0.2s;
+}
+
+
+.main-nav li a:hover, 
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+}
+
+/*-----------------------------------------------------*/
+/*FEATURES*/
+/*-----------------------------------------------------*/
+/* only want to have for this specific long copy inside section features*/
+.section-features .long-copy{
+    margin-bottom: 30px;
+}
+
+
+/*-----------------------------------------------------*/
+/*MEAL*/
+/*-----------------------------------------------------*/
+
+.section-meals{
+    padding: 0;
+}
+
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+    
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%; /* height with respect to its parent that is meal showcase*/
+}
+
+.meals-showcase figure{
+    margin: 0; /* have to do because of normalize.css file*/
+    width: 100%;
+    overflow:hidden;
+    background-color: #000; /*black container for photo of lower opacty*/
+}
+
+.meals-showcase figure img{
+    opacity: 0.7; /* black container of this image so it will look darker */
+    width: 100%; /* inherit height from parent element */
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meals-showcase figure img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+
+/*-----------------------------------------------------*/
+/*HOW IT WORKS*/
+/*-----------------------------------------------------*/
+
+.section-steps{
+    background-color: #f4f4f4;
+}
+
+
+.steps-box:first-child{ /* selects the left box of the two */
+    text-align: right; /* also works for images as it is inline */
+    padding-right: 3%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child{
+    padding-left: 3%;
+    margin-top:70px;
+    
+}
+
+.app-screen{
+    width: 40%;
+    
+}
+
+.works-step{
+    margin-bottom: 50px;
+    
+}
+
+.works-step:last-of-type{ /* the last one should have bottom margin of 80px */
+    margin-bottom:80px;
+}
+
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /*does not cause line break so number can be side by side with text */
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    font-size: 150%;
+    float:left;
+    margin-right:25px;
+    
+}
+
+.btn-app:link,
+.btn-app:visited{
+    border: 0;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    margin
+}
+
+/*-----------------------------------------------------*/
+/*CITIES*/
+/*-----------------------------------------------------*/
+
+.section-cities img{
+    width: 100%; /* as wide as the box only */
+    text-align: center;
+    margin-bottom: 15px; 
+    overflow: hidden;
+}
+
+.city-feature{
+    margin-bottom: 5px;
+}
+
+.icon-small{
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /* to align icons and text */
+    line-height: 120%;
+    vertical-align: middle; /* the text should be at the middle of the font icon*/
+    
+    margin-top: -5px;
+
+}
+
+
+/*-----------------------------------------------------*/
+/*TESTIMONIALS */
+/*-----------------------------------------------------*/
+
+.section-testimonials{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+    background-size: cover;
+    color: #fff;
+    background-attachment: fixed; /* sliding effect */
+}
+
+
+blockquote{
+    padding: 2%;
+    font-style: italic; /* included from google fonts*/
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+} 
+
+cite{
+    font-size: 90%;
+    margin-top: 20px;
+    display: block;
+}
+
+blockquote:before{
+    content:"\201C";
+    font-size: 500%;
+    display:block; /* to have this in a new line*/
+    position: absolute; /* to use absolute here its parent element must have relative position*/
+    top: -5px;
+    left: -5px;
+}
+
+cite img{
+    height: 45px;
+    border-radius: 50%;
+    margin-right:10px;
+    vertical-align: middle; /* text should be middle right of the icon */
+}
+
+
+/*-----------------------------------------------------*/
+/*SIGN UP */
+/*-----------------------------------------------------*/
+
+.section-plans{
+    background-color: #f4f4f4;
+    
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0 2px 2px #909090;
+}
+
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+    
+}
+
+.plan-price{
+    font-size: 300%;
+    font-weight: 100; /* with bigger font size use smaller weight */
+    margin-bottom: 10px;
+    color:#e67e22;
+}
+
+.plan-price span{ 
+    font-size: 30%; /* is child of .plan-price so 30% of the 300% of the base size */
+    font-weight: 300; /* would inherit 100 from .plan-price which the parent */
+    
+}
+
+.plan-price-meal{
+    font-size: 80%;
+}
+
+
+.plan-box ul{
+    list-style: none;
+}
+
+.plan-box ul{
+    padding: 5px 0px;
+    
+}
+
+
+
+/*-----------------------------------------------------*/
+/*FORM  */
+/*-----------------------------------------------------*/
+
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+    
+}
+
+input[type= text],
+input[type= email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+    
+}
+
+
+input[type=checkbox]{
+    margin:10px 5px 10px 0;
+}
+
+* :focus {
+    outline:none;
+}
+
+
+/*-----------------------------------------------------*/
+/*FOTTER  */
+/*-----------------------------------------------------*/
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+    
+}
+
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    float:right;
+    list-style: none;
+    
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    border: 0;
+    color: #888;
+    transition: color 0.2s;
+}
+
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    border: 0;
+    color: #ddd;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size:160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-instagram,
+.ion-social-googleplus{
+    transition: color 0.2s;
+}
+
+
+footer .ion-social-facebook:hover{
+    color: #3b5998;
+}
+
+footer .ion-social-twitter:hover{
+    color: #00aced;
+}
+footer .ion-social-googleplus:hover{
+    color: #dd4b39;
+}
+
+footer .ion-social-instagram:hover{
+    color: #517fa4;
+}
+
+footer p{
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+[all]
+files=resources/css/style.css
+min_severity = MAJOR
+bears=CSSLintBear
+[Section2]
+files= index.html
+bears=HTMLLintBear
+min_severity = NORMAL
